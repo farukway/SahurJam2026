@@ -1,0 +1,49 @@
+/* Import retro font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Press Start 2P', monospace; /* Retro 8-bit font */
+    color: white;
+}
+
+#game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #5c94fc; /* Mario sky blue */
+    overflow: hidden; /* Hide anything outside the canvas */
+}
+
+/* Heads Up Display */
+#hud {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 16px;
+    z-index: 10;
+    text-shadow: 2px 2px 0px #000;
+}
+
+#hud div {
+    text-align: center;
+    line-height: 1.5;
+}
+
+canvas {
+    display: block;
+    /* Pixel art rendering */
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
